@@ -1,0 +1,108 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+body, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Reset End */
+
+#transicion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    background-size: 100% 100%;
+    transition: 600ms;
+}
+
+.container {
+    margin: 5% auto 0;
+}
+
+.container:before {
+    content: url('avatar.png'); 
+    display: block;
+    margin: 0 auto;
+    height: 184px;
+    width: 173px;
+}
+
+#loginform { 
+    background: #e1e3e8;
+    border: solid 1px #fff; 
+    border-radius:5px; 
+    box-shadow: 0 0 7px -1px rgba(0,0,0,0.4);
+    height: 75px;
+    margin: 115px auto 0; 
+    position: relative;
+    width: 538px;
+
+}
+
+.login-username .input {
+    margin-left: 14px;
+}
+
+.input { 
+    background-color: #f5f6f7;
+    border: solid 1px #b4b6bd; 
+    border-radius:5px; 
+    box-sizing: border-box;
+    color: #767c8b;
+    display: inline-block;
+    font: 18px/22px arial;
+    float: left;
+    height: 55px;  
+    margin: 10px 0 9px 14px;
+    outline: 0;
+    padding-left: 18px;
+    transition: box-shadow 0.4s ease;
+    width: 248px;
+}
+.input:focus { 
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.login-password .input {
+    margin-right: 14px;
+}
+
+.button-primary {
+    background-color: #ff6600;
+    border: solid 1px transparent; 
+    border-radius: 0 6px 6px 0; 
+    box-shadow: 0 0 7px -1px rgba(0,0,0,0.5);
+    color: #fff;	
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    height: 52px;
+    left: 538px;
+    margin: 12px 0 0 1px;
+    outline: none;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 0 1px #000;
+    transition: box-shadow 0.5s ease,text-shadow 0.5s 0.3s;
+    width: 46px;
+}
+
+.button-primary:hover { 
+    text-shadow: 0 0 1px rgba(255,255,255,0.8);
+    box-shadow: 0 0 7px -1px rgba(0,0,0,0.8);
+}
+
+#loginform .login-remember {
+    display: none;
+}
+
+/* Code Ends */

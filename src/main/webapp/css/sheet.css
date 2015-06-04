@@ -1,0 +1,144 @@
+body {
+    font-family: arial;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 1.5em;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#imagen { 
+    position: fixed;
+    border: 1px solid grey;
+    width: 16.5%;
+}
+
+#header {
+    background-color: gray;
+    color: white;
+    position: fixed;
+    width: 83%;
+}
+
+#navizq{
+    position: fixed;
+    padding: 20px 10px;
+    background-color:#eeeeee;
+    height: 800px;
+    width:16.6%;
+    float:left;
+    border:1px solid grey;
+}
+
+#navder{
+    position: fixed;
+    padding: 20px 10px;
+    background-color:#eeeeee;
+    height:800px;
+    width:16.6%;
+    right: 0;
+    border:1px solid grey;
+}
+
+#content{
+    width: calc(100%*(3/4));
+    float:left;
+}
+
+li a {
+    color: white;
+}
+
+ul {
+    display: inline;
+    padding: 15px 4px 17px 0;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: -4px;
+    position: relative;
+    padding: 10px 10px;
+    background: green;
+}
+
+ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 40px; /*distancia del la lista a la 2a lista*/
+    left: 20px; /*a partir de la lista en que se despliega*/
+    width: 200px; /*tamaño de la nueva lista "u1"*/
+    visibility: hidden; /*inverso a 'visibility: visible'*/
+}
+ul li ul li { 
+    background: #154290;
+    display: block;
+}
+
+li a:hover {
+    color: red;
+}
+
+ul li:hover {
+    background: #555;
+}
+
+ul li {
+
+}
+
+ul li ul li:hover {
+    color: #323;
+    background: #666;
+}
+
+ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible; /*inverso a 'visibility: hiden '*/
+}
+/* === Button Style === */
+button.submit {
+    color:white;
+    background-color: black;
+    box-shadow: 0px 7px 7px #666;
+    padding:10px;
+}
+
+aside {
+    float: right;
+    width: 220px;
+    min-height: 100%;
+    position: relative;
+    top: 0px;
+    padding-bottom: 20px;
+}
+
+.jumbo {
+    margin: 0 auto;
+    padding: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #EEE;
+    width: 50%;
+}
+
+.boton {
+    color: white;
+    background-color: #0030FF;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #660066;
+}

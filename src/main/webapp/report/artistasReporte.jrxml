@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3fa5952e-6183-4bc2-95d9-fb6105b90692">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     artistas."id" AS artistas_id,
+     artistas."nombre" AS artistas_nombre,
+     artistas."apellidos" AS artistas_apellidos,
+     artistas."nacimiento" AS artistas_nacimiento,
+     artistas."defuncion" AS artistas_defuncion,
+     artistas."nacionalidad" AS artistas_nacionalidad,
+     artistas."observaciones" AS artistas_observaciones
+FROM
+     "prof"."artistas" artistas]]>
+	</queryString>
+	<field name="artistas_id" class="java.lang.Integer"/>
+	<field name="artistas_nombre" class="java.lang.String"/>
+	<field name="artistas_apellidos" class="java.lang.String"/>
+	<field name="artistas_nacimiento" class="java.sql.Date"/>
+	<field name="artistas_defuncion" class="java.sql.Date"/>
+	<field name="artistas_nacionalidad" class="java.lang.String"/>
+	<field name="artistas_observaciones" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="af2bb2e8-cccf-494d-8f58-f93f0d041a10"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[Artistas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="a91a5bd1-c9b8-4d95-855a-29b92dd07cb0"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="9b9f44db-f5ce-45c7-bf30-24be5933ac49"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="79" height="15" uuid="502b364b-d945-48c4-be5a-567be2e3c6f8"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[artistas_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="79" y="19" width="79" height="15" uuid="89e97d49-6c37-49fc-83f7-4c4d7545487c"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[artistas_nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="19" width="79" height="15" uuid="758d68ab-90b4-469e-8f4a-8bb5b96f8e04"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[artistas_apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="19" width="79" height="15" uuid="462be07b-c0fb-4e43-a7bc-11c217c8e898"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[artistas_nacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="19" width="79" height="15" uuid="31c909fb-dfbf-4e3e-9b55-38bb70200fe9"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[artistas_defuncion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="19" width="79" height="15" uuid="9782bc69-1e26-4f6e-8cab-296a081f17b2"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[artistas_nacionalidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="19" width="79" height="15" uuid="7c0ba0fc-6902-4fe5-b85d-8484a7e84117"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[artistas_observaciones]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="760484ca-be36-43bd-b4b6-96665c5b59e1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="79" height="15" uuid="1b9dd662-945b-4d16-89fd-183e95eaea72"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{artistas_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="79" y="0" width="79" height="15" uuid="ff4dacad-9711-4f0d-8636-378279ff9086"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{artistas_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="158" y="0" width="79" height="15" uuid="97971e44-a766-4e4f-a277-5b05abdfc567"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{artistas_apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="237" y="0" width="79" height="15" uuid="8d22b2b2-8200-4387-8676-4d2e85d167f4"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{artistas_nacimiento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="316" y="0" width="79" height="15" uuid="8d4c10d8-54f7-47c8-8fd7-d001183a9013"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{artistas_defuncion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="395" y="0" width="79" height="15" uuid="b7eca4f2-86bc-4f6a-9e5d-4c829f636fca"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{artistas_nacionalidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="474" y="0" width="79" height="15" uuid="ac0547e6-1bf9-4b6f-a756-180da0e4ee4d"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{artistas_observaciones}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="5759e333-930b-4f7f-a436-0b9e0187d4e3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="2b4df048-4cd7-4557-9f41-15091688dcd3"/>
+				<textElement textAlignment="Right">
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="130a9d3c-a2f8-479f-95a5-2e2f87c2eca1"/>
+				<textElement>
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="2ab88afc-9caf-4044-b772-da07863bf70b"/>
+				<textElement>
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

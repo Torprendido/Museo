@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf0fb6c3-67ba-4ab0-bf32-62f3c488ac52">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     museos."id" AS museos_id,
+     museos."nombre" AS museos_nombre,
+     museos."ciudad" AS museos_ciudad,
+     museos."foto_path" AS museos_foto_path,
+     museos."conservador" AS museos_conservador
+FROM
+     "prof"."museos" museos]]>
+	</queryString>
+	<field name="museos_id" class="java.lang.Integer"/>
+	<field name="museos_nombre" class="java.lang.String"/>
+	<field name="museos_ciudad" class="java.lang.String"/>
+	<field name="museos_foto_path" class="java.lang.String"/>
+	<field name="museos_conservador" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="630ffebe-91b7-487f-ad0f-e4fabcb4efc2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[Museos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="0d119603-72dc-4090-8e79-603c2b842e1e"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="7b0d5d84-621a-4446-982a-6d7cb632ace4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="111" height="15" uuid="f87aa6bc-46b6-403e-8d77-f3e42c355689"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[museos_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="111" y="19" width="111" height="15" uuid="e8edc447-6588-4b58-bc0c-296782e457ad"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[museos_nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="19" width="111" height="15" uuid="634636b1-c98e-4622-9ea1-4de633cd0cc7"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[museos_ciudad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="19" width="111" height="15" uuid="49d1ecb4-2cac-4281-9cf3-65a5b89d9564"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[museos_foto_path]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="19" width="111" height="15" uuid="f7f40645-0c35-49bc-b505-4e69fbbf17d2"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[museos_conservador]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="5cb71ce2-e35f-47de-97ae-1d84a1ddd865"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="111" height="15" uuid="aa4c4d85-9eb2-46ac-8bb2-70d3c7606bf3"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{museos_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="111" y="0" width="111" height="15" uuid="903dc60f-967b-4417-b697-203ad1445302"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{museos_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="222" y="0" width="111" height="15" uuid="e9de2fc8-10b2-465f-a42e-de8eff086109"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{museos_ciudad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="6ba23c3b-bf92-49e5-ba87-2677a4ed772d"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{museos_foto_path}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="cf1e668b-f45e-45d2-b893-6b284999c5f9"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{museos_conservador}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="cb88dd90-35b9-4b92-9473-5099c0645d1c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="f3134bfd-fd60-4ed5-8c3d-b64b5009852b"/>
+				<textElement textAlignment="Right">
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="55ccae8b-938c-4383-924a-ed7ddf117cdf"/>
+				<textElement>
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="47b7d630-aa12-462e-aeb3-1aa473b29f55"/>
+				<textElement>
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

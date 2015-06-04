@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="319ae024-801f-4d26-9493-5764006e3327">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     corrientes."id" AS corrientes_id,
+     corrientes."nombre" AS corrientes_nombre,
+     corrientes."descripcion" AS corrientes_descripcion,
+     corrientes."inicio" AS corrientes_inicio,
+     corrientes."fin" AS corrientes_fin
+FROM
+     "prof"."corrientes" corrientes]]>
+	</queryString>
+	<field name="corrientes_id" class="java.lang.Integer"/>
+	<field name="corrientes_nombre" class="java.lang.String"/>
+	<field name="corrientes_descripcion" class="java.lang.String"/>
+	<field name="corrientes_inicio" class="java.sql.Date"/>
+	<field name="corrientes_fin" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="432df295-e4c3-4363-8a0d-f64bb49f3117"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[Corrientes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="2ed6d488-a70a-438c-8ad5-96420a8d2be2"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="8cd2c309-dd28-4b0f-8f12-6a75df6f7cd7"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="111" height="15" uuid="480e6a91-3752-489d-af61-94e60fc8f3b4"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[corrientes_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="111" y="19" width="111" height="15" uuid="7adc59f3-7816-4170-b13e-0e30368a282e"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[corrientes_nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="19" width="111" height="15" uuid="26390d40-3321-475e-ac50-6357d3241508"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[corrientes_descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="19" width="111" height="15" uuid="896721fa-3b39-4e1d-8e0d-983f25077cfa"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[corrientes_inicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="19" width="111" height="15" uuid="44a5abd2-18ea-42e7-a0d9-98f31f896e61"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[corrientes_fin]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="36806135-966f-40d0-82ef-3386a46663e8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="111" height="15" uuid="e6c8f1c4-4b9d-4a78-be69-462f3c09d4f8"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{corrientes_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="111" y="0" width="111" height="15" uuid="a2d8bc79-f53a-462b-989a-a2a950a7a54b"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{corrientes_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="222" y="0" width="111" height="15" uuid="ba9bd846-194a-4d86-8178-bb1776db176a"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{corrientes_descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="9bffb00c-d9ae-4430-b18f-efb8edf8678f"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{corrientes_inicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="8bf2b38f-7d46-49f4-b276-889085ebd48b"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{corrientes_fin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="5c55c4dd-27ee-44fd-9e35-1ae2c38ec63d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="4b6e3354-2e95-49a6-b3e3-f79eefbc2285"/>
+				<textElement textAlignment="Right">
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="851f8b15-92c8-413d-9f6f-f95f05ef8328"/>
+				<textElement>
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="d247dca3-4332-4fdc-b181-2bea71780e60"/>
+				<textElement>
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

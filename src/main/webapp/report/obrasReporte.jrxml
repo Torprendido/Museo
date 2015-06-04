@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1da4c278-20c6-46c9-af1b-feab6ce8c628">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     obras."id" AS obras_id,
+     obras."titulo" AS obras_titulo,
+     obras."tipo" AS obras_tipo,
+     obras."anio" AS obras_anio,
+     obras."materiales" AS obras_materiales,
+     obras."alto" AS obras_alto,
+     obras."ancho" AS obras_ancho,
+     obras."largo" AS obras_largo
+FROM
+     "prof"."obras" obras]]>
+	</queryString>
+	<field name="obras_id" class="java.lang.Integer"/>
+	<field name="obras_titulo" class="java.lang.String"/>
+	<field name="obras_tipo" class="java.lang.String"/>
+	<field name="obras_anio" class="java.lang.Integer"/>
+	<field name="obras_materiales" class="java.lang.String"/>
+	<field name="obras_alto" class="java.lang.Integer"/>
+	<field name="obras_ancho" class="java.lang.Integer"/>
+	<field name="obras_largo" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="c2168c8b-916f-49c6-aaba-08100821a8a2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[Obras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="7bdcf3cc-d31a-4ee8-bed7-34b55d1bfd25"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[Leaf Gray SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="68252ed0-886b-432b-85e2-20cf44b3f1c8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="69" height="15" uuid="f323e125-10e3-4b06-828f-4e5d8fdbe02d"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[obras_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="69" y="19" width="69" height="15" uuid="da2745b5-7454-4e5e-9ca8-27ed9680d253"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[obras_titulo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="69" height="15" uuid="650c7f3c-c320-445f-b57f-67bfa1b17d41"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[obras_tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="207" y="19" width="69" height="15" uuid="d75008b3-28b0-4f5b-924a-af62e7a741ce"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[obras_anio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="19" width="69" height="15" uuid="36de1579-5426-40fa-bb96-6cd9594dc3de"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[obras_materiales]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="345" y="19" width="69" height="15" uuid="f12d1272-e8ae-4712-bea4-8e4b21c66efe"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[obras_alto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="19" width="69" height="15" uuid="13ad54e6-a9b6-4e77-9fde-debc93d67afd"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[obras_ancho]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="483" y="19" width="69" height="15" uuid="94461b10-41ab-4e28-bcb6-20af92b49370"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<text><![CDATA[obras_largo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="c620c66e-cd8f-4311-a929-16e4c10a586a"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="69" height="15" uuid="42837e2a-f839-4da7-8721-549c5f339472"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obras_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="69" y="0" width="69" height="15" uuid="0b5e89c4-dd21-4104-8f98-40979f2e32e9"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obras_titulo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="69" height="15" uuid="fe5a8f2d-32cc-4298-9f7b-35f532f87fc3"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obras_tipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="207" y="0" width="69" height="15" uuid="5af67da7-77f7-472e-9a0e-d00f9029a64e"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obras_anio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="276" y="0" width="69" height="15" uuid="c466cebe-9656-4d18-a77d-d904a15388c6"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obras_materiales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="345" y="0" width="69" height="15" uuid="54707d98-fd8d-4039-bfe7-f1e659e6738f"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obras_alto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="414" y="0" width="69" height="15" uuid="e2bee19d-16ce-49d1-8cf3-e69c0498aaf8"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obras_ancho}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="483" y="0" width="69" height="15" uuid="1278a71d-bd34-416e-b6ed-3c2c9d24bcc6"/>
+				<textElement>
+					<font fontName="FreeSans"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obras_largo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="50a14f8d-9153-4247-b623-490fe6782e60"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="305fae59-830d-4ff9-97c9-fb07b408034c"/>
+				<textElement textAlignment="Right">
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="8696048e-9874-4deb-8634-b788c3dd6c3b"/>
+				<textElement>
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="709cd99a-e346-4f1f-9cdd-0016b195b59c"/>
+				<textElement>
+					<font fontName="FreeSans" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
